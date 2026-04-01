@@ -100,16 +100,21 @@ const WA_LINK = "https://wa.me/56961765268?text=" + encodeURIComponent("Hola, qu
         <nav class="hidden lg:flex items-center gap-8">
           <a href="#inicio" class="text-slate-800 hover:text-[#0045A7] font-medium text-sm tracking-wide transition-colors">Inicio</a>
           <a href="#servicios" class="text-slate-800 hover:text-[#0045A7] font-medium text-sm tracking-wide transition-colors">Servicios</a>
-          <a href="#proceso" class="text-slate-800 hover:text-[#0045A7] font-medium text-sm tracking-wide transition-colors">Proceso</a>
           <a href="#tecnologia" class="text-slate-800 hover:text-[#0045A7] font-medium text-sm tracking-wide transition-colors">Tecnología</a>
-          <a href="#faq" class="text-slate-800 hover:text-[#0045A7] font-medium text-sm tracking-wide transition-colors">FAQ</a>
+          <a href="#tarifas" class="text-slate-800 hover:text-[#0045A7] font-medium text-sm tracking-wide transition-colors">Tarifas</a>
           <a href="#contacto" class="text-slate-800 hover:text-[#0045A7] font-medium text-sm tracking-wide transition-colors">Contacto</a>
         </nav>
 
-        <a href={WA_LINK} target="_blank" rel="noopener"
-           class="hidden lg:inline-flex items-center gap-2 bg-[#0045A7] text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-[#003580] transition-colors">
-          Contactar ahora
-        </a>
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="https://diseñopaginas.cl/demo-propiedades" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 border-2 border-[#0045A7] text-[#0045A7] font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-[#0045A7] hover:text-white transition-all">
+            Ver Demo
+          </a>
+          <a href={WA_LINK} target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 bg-[#0045A7] text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-[#003580] transition-colors">
+            Contactar ahora
+          </a>
+        </div>
 
         <button id="hamburger" class="lg:hidden p-2 text-slate-600" aria-label="Menú">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
