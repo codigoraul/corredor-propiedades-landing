@@ -1,17 +1,351 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+const WA_LINK = "https://wa.me/56961765268?text=" + encodeURIComponent("Hola, quiero una página web para mi corredora de propiedades");
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section id="inicio" class="relative overflow-hidden">
+  <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('/hero-bg.webp');"></div>
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-36 grid lg:grid-cols-2 gap-16 items-center">
+    <div>
+      <span class="inline-block text-[#1BDCF5] text-xs font-semibold tracking-[0.2em] uppercase mb-8">
+        Especialistas en propiedades &middot; Todo Chile
+      </span>
+      <h1 class="font-display text-5xl lg:text-6xl font-bold text-[#1BDCF5] leading-tight mb-6">
+        Página web para<br/>
+        <span class="text-white">corredor de<br/>propiedades</span><br/>
+        en Chile
+      </h1>
+      <p class="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
+        Tu sitio inmobiliario listo en <strong class="text-[#1BDCF5] font-semibold">10 días</strong>,
+        con catálogo de propiedades, filtros de búsqueda y optimizado para aparecer primero en Google Chile.
+      </p>
+      <div class="flex flex-wrap gap-4 mb-10">
+        <a href={WA_LINK} target="_blank" rel="noopener"
+           class="bg-[#0045A7] hover:bg-[#003580] text-white font-semibold text-base px-8 py-4 rounded-lg transition-all duration-200 inline-block shadow-lg shadow-[#0045A7]/20 hover:shadow-[#0045A7]/30">
+          Quiero mi página web
+        </a>
+        <a href="#servicios"
+           class="border-2 border-white/30 hover:border-white text-white hover:text-white font-medium text-base px-8 py-4 rounded-lg transition-all duration-200 inline-block">
+          Ver qué incluye
+        </a>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-white/60">
+        <span class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-[#1BDCF5]"></span>Sin mensualidades</span>
+        <span class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-[#1BDCF5]"></span>Dominio .cl incluido</span>
+        <span class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-[#1BDCF5]"></span>Soporte post-entrega</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ══════════════════════════════════════
+     PROBLEMA / SOLUCIÓN
+══════════════════════════════════════ -->
+<section class="py-24 bg-white" id="problema">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center mb-16">
+      <span class="inline-block text-[#0045A7] text-xs font-semibold tracking-[0.2em] uppercase mb-4">Compara</span>
+      <h2 class="font-display text-4xl lg:text-5xl font-bold text-[#0D1B3E] mb-4">¿Por qué necesitas tu<br/>propia página web?</h2>
+      <p class="text-slate-500 text-lg max-w-2xl mx-auto">Los portales te dan visibilidad, pero no te hacen dueño de tu presencia digital.</p>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-8">
+      <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
+        <h3 class="text-xl font-semibold text-slate-700 mb-6 pb-3 border-b border-slate-100">Sin página propia</h3>
+        <ul class="space-y-4">
+          {[
+            "Portalinmobiliario cobra mensualmente — si no pagas, desapareces",
+            "El cliente recuerda el portal, no a ti como corredor",
+            "No apareces en Google cuando buscan tu nombre",
+            "Dependes de las reglas y algoritmos del portal",
+            "No puedes personalizar cómo se muestran tus propiedades",
+          ].map(item => (
+            <li class="flex gap-3 items-start text-slate-500 text-sm">
+              <span class="w-5 h-5 rounded-full bg-red-50 text-red-400 flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold">✕</span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="bg-[#F7FAFF] rounded-2xl border border-[#0045A7]/15 p-8 shadow-sm">
+        <h3 class="text-xl font-semibold text-[#0045A7] mb-6 pb-3 border-b border-[#0045A7]/10">Con tu página web propia</h3>
+        <ul class="space-y-4">
+          {[
+            "Pago único de desarrollo — sin mensualidades de portal",
+            "Tu marca, tu logo, tu identidad ante los clientes",
+            "Apareces en Google cuando buscan corredor + tu ciudad",
+            "Control total sobre tus propiedades y tu imagen",
+            "Los clientes te contactan directo por WhatsApp",
+          ].map(item => (
+            <li class="flex gap-3 items-start text-slate-600 text-sm font-medium">
+              <span class="w-5 h-5 rounded-full bg-[#0045A7] text-white flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold">✓</span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SERVICIOS
+══════════════════════════════════════ -->
+<section class="py-24 bg-[#F7FAFF]" id="servicios">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center mb-16">
+      <span class="inline-block text-[#0045A7] text-xs font-semibold tracking-[0.2em] uppercase mb-4">Qué incluye</span>
+      <h2 class="font-display text-4xl lg:text-5xl font-bold text-[#0D1B3E] mb-4">Todo listo desde el primer día</h2>
+      <p class="text-slate-500 text-lg max-w-xl mx-auto">Sin plugins de pago, sin configuraciones extras. Todo incluido.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      {[
+        ["Catálogo de Propiedades", "Panel para agregar propiedades con fotos, precio UF, dormitorios, baños, m² y ubicación. Sin límite de propiedades.", true],
+        ["Filtros de Búsqueda", "Tus clientes filtran por tipo de propiedad, operación (venta/arriendo) y precio máximo en UF.", false],
+        ["100% Responsive", "Diseño perfecto en celular, tablet y computador. El 70% de tus clientes busca desde el móvil.", false],
+        ["Ultra Rápido", "Tecnología Astro JS + WordPress Headless. Carga en menos de 1 segundo.", false],
+        ["Mapa Google Maps", "Cada propiedad muestra su ubicación exacta en Google Maps. Más confianza, más visitas.", false],
+        ["WhatsApp por Propiedad", "Botón de contacto directo en cada propiedad. El cliente llega directo a ti.", false],
+        ["Galería con Lightbox", "Galería de fotos con zoom y carrusel profesional. Como los grandes portales inmobiliarios.", false],
+        ["SEO Local Chile", "Optimizado para aparecer en Google. Schema.org, metadatos y velocidad de carga incluidos.", false],
+      ].map(([titulo, desc, featured]) => (
+        <div class={`group p-6 rounded-2xl border transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg ${featured ? 'bg-[#0045A7] border-[#0045A7] text-white shadow-lg shadow-[#0045A7]/15' : 'bg-white border-slate-200 hover:border-[#0045A7]/30'}`}>
+          <h3 class={`font-semibold text-base mb-3 ${featured ? 'text-white' : 'text-slate-700'}`}>{titulo}</h3>
+          <p class={`text-sm leading-relaxed ${featured ? 'text-blue-100/80' : 'text-slate-500'}`}>{desc}</p>
+          <div class={`inline-block mt-4 text-xs font-semibold tracking-wider uppercase px-3 py-1 rounded-full ${featured ? 'bg-[#1BDCF5] text-[#0D1B3E]' : 'bg-slate-100 text-slate-500 group-hover:bg-[#0045A7]/10 group-hover:text-[#0045A7]'} transition-colors`}>
+            Incluido
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PROCESO
+══════════════════════════════════════ -->
+<section class="py-24 bg-[#0D1B3E]" id="proceso">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center mb-16">
+      <span class="inline-block text-[#1BDCF5] text-xs font-semibold tracking-[0.2em] uppercase mb-4">Cómo trabajamos</span>
+      <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-4">Tu página lista en 15 días</h2>
+      <p class="text-white/40 text-lg">Simple, transparente y sin sorpresas.</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+      {[
+        ["01", "Reunión inicial", "Conversamos por WhatsApp o videollamada. Nos cuentas tu negocio y zona de trabajo en Chile.", "Día 1"],
+        ["02", "Diseño personalizado", "Creamos el diseño con tu logo y colores. Te mostramos vista previa antes de programar.", "Días 2–5"],
+        ["03", "Desarrollo y carga", "Programamos tu sitio, cargamos tus propiedades y configuramos el panel de administración.", "Días 6–12"],
+        ["04", "Entrega y capacitación", "Lanzamos en tu dominio .cl y te enseñamos a gestionar propiedades solo, sin ayuda.", "Días 13–15"],
+      ].map(([num, titulo, desc, tiempo]) => (
+        <div class="bg-white/5 border border-white/8 rounded-2xl p-8 hover:border-[#1BDCF5]/30 transition-all duration-200">
+          <div class="text-5xl font-display font-bold text-[#1BDCF5]/15 mb-5">{num}</div>
+          <h3 class="text-white font-semibold text-lg mb-3">{titulo}</h3>
+          <p class="text-white/40 text-sm leading-relaxed mb-5">{desc}</p>
+          <span class="inline-block border border-[#1BDCF5]/30 text-[#1BDCF5] text-xs font-semibold px-3 py-1 rounded-full">{tiempo}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     TECNOLOGÍA
+══════════════════════════════════════ -->
+<section class="py-24 bg-white" id="tecnologia">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center mb-16">
+      <span class="inline-block text-[#0045A7] text-xs font-semibold tracking-[0.2em] uppercase mb-4">Tecnología</span>
+      <h2 class="font-display text-4xl lg:text-5xl font-bold text-[#0D1B3E] mb-4">Mejor que Wix o<br/>WordPress clásico</h2>
+      <p class="text-slate-500 text-lg">WordPress Headless + Astro JS es la combinación más potente del mercado.</p>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-6 mb-16">
+      <div class="p-8 bg-slate-50 rounded-2xl border border-slate-200">
+        <h3 class="font-semibold text-slate-600 text-lg mb-6">Wix / WordPress clásico</h3>
+        <ul class="space-y-4">
+          {["Carga lenta — 4 a 8 segundos","Vulnerable a hackeos y malware","Pagas plugins mensualmente","Diseño genérico de plantilla","Mal puntaje en Google PageSpeed"].map(i => (
+            <li class="flex gap-3 text-slate-500 text-sm items-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-red-400 flex-shrink-0"></span>{i}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="p-8 bg-[#F7FAFF] rounded-2xl border border-[#0045A7]/15">
+        <h3 class="font-semibold text-[#0045A7] text-lg mb-6">WordPress Headless + Astro JS</h3>
+        <ul class="space-y-4">
+          {["Carga ultra rápida — menos de 1 segundo","Frontend separado — mucho más seguro","Sin plugins de pago innecesarios","Diseño 100% personalizado con tu marca","98+ en Google PageSpeed"].map(i => (
+            <li class="flex gap-3 text-slate-600 text-sm font-medium items-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#0045A7] flex-shrink-0"></span>{i}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-wrap justify-center gap-10">
+      {[["WP","WordPress"],["ACF","Custom Fields"],["Astro","Astro JS"],["▼","Vercel"],["Maps","Google Maps"]].map(([icon, label]) => (
+        <div class="flex flex-col items-center gap-2 group cursor-default">
+          <div class="w-16 h-16 flex items-center justify-center rounded-xl border border-slate-200 bg-white text-[#0045A7] font-bold text-sm group-hover:bg-[#0045A7] group-hover:text-white group-hover:border-[#0045A7] transition-all duration-200">
+            {icon}
+          </div>
+          <span class="text-xs text-slate-400 text-center">{label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FAQ
+══════════════════════════════════════ -->
+<section class="py-24 bg-[#F7FAFF]" id="faq">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <span class="inline-block text-[#0045A7] text-xs font-semibold tracking-[0.2em] uppercase mb-4">Preguntas frecuentes</span>
+      <h2 class="font-display text-4xl lg:text-5xl font-bold text-[#0D1B3E]">Todo lo que necesitas saber</h2>
+    </div>
+    <div class="space-y-3">
+      {[
+        ["¿Cuánto cuesta una página web para corredor de propiedades?", "Nuestros proyectos parten desde UF 30 el desarrollo inicial. Hosting desde $15.000 CLP/mes. Sin costos ocultos. Cotización personalizada por WhatsApp en menos de 24 horas."],
+        ["¿Puedo agregar propiedades yo mismo sin saber programar?", "Sí, 100%. El panel WordPress es muy intuitivo — igual que subir una foto a Instagram. Agrega fotos, precio, descripción y ubicación en minutos. Te capacitamos en la entrega."],
+        ["¿Apareceré en Google cuando busquen corredor de propiedades en mi ciudad?", "Ese es el objetivo principal. Configuramos SEO local completo: metadatos, Schema.org, Google Business Profile y velocidad de carga óptima. Resultados visibles en 30 a 90 días."],
+        ["¿Funciona para inmobiliarias grandes también?", "Sí. La tecnología escala desde un corredor independiente hasta inmobiliarias con más de 500 propiedades y múltiples agentes. El sistema crece contigo."],
+        ["¿Qué pasa si necesito cambios después de la entrega?", "Incluimos 30 días de soporte post-entrega sin costo adicional. Después ofrecemos planes de mantenimiento mensual o cobro por hora según lo que necesites."],
+        ["¿Trabajan en todo Chile o solo en algunas ciudades?", "Todo Chile — desde Arica hasta Punta Arenas. Trabajamos 100% remoto por videollamada y WhatsApp, la ubicación no importa."],
+        ["¿Puedo seguir usando Portalinmobiliario además de mi página?", "Sí. Tu sitio web es completamente independiente. Puedes usarlos en paralelo y dejar de depender solo de los portales para conseguir clientes."],
+      ].map(([pregunta, respuesta]) => (
+        <details class="group bg-white rounded-xl border border-slate-200 hover:border-[#0045A7]/30 hover:shadow-sm transition-all duration-200">
+          <summary class="flex justify-between items-center px-6 py-5 cursor-pointer list-none">
+            <span class="font-medium text-slate-700 text-base pr-4 group-open:text-[#0045A7]">{pregunta}</span>
+            <span class="text-[#0045A7] text-2xl flex-shrink-0 font-light transition-transform duration-200 group-open:rotate-45">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-slate-500 text-sm leading-relaxed border-t border-slate-100 pt-4">
+            {respuesta}
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     STATS
+══════════════════════════════════════ -->
+<section class="bg-[#646778]">
+  <div class="max-w-5xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/15">
+    {[
+      ["+120", "Corredores activos"],
+      ["15", "Días de entrega"],
+      ["98%", "PageSpeed Score"],
+      ["16", "Regiones de Chile"],
+    ].map(([num, label]) => (
+      <div class="text-center py-10 px-6">
+        <div class="text-4xl font-display font-bold text-white mb-1">{num}</div>
+        <div class="text-blue-200/60 text-sm">{label}</div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CTA FINAL
+══════════════════════════════════════ -->
+<section class="py-28 bg-[#0045A7] text-center relative overflow-hidden" id="contacto">
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#1BDCF5] opacity-10 blur-[120px] rounded-full"></div>
+  </div>
+  <div class="relative max-w-3xl mx-auto px-6">
+    <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-6">
+      ¿Listo para tener tu página<br/>web inmobiliaria?
+    </h2>
+    <p class="text-blue-100/70 text-lg mb-10 leading-relaxed">
+      Cotizamos en menos de 24 horas. Tu sitio puede estar listo en 15 días.
+    </p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href={WA_LINK} target="_blank" rel="noopener"
+         class="bg-white hover:bg-[#1BDCF5] text-[#0045A7] font-semibold text-lg px-10 py-4 rounded-lg transition-all duration-200 inline-block shadow-lg shadow-black/10">
+        Escribir por WhatsApp
+      </a>
+      <a href="mailto:codigoraul@gmail.com"
+         class="border border-white/30 hover:border-white text-white font-medium text-lg px-10 py-4 rounded-lg transition-all duration-200 inline-block">
+        Enviar correo
+      </a>
+    </div>
+    <p class="text-blue-200/40 text-sm mt-8">Corredores de propiedades e inmobiliarias · Todo Chile</p>
+  </div>
+</section>
+
+<!-- Schema.org FAQPage para SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta una página web para corredor de propiedades?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nuestros proyectos parten desde UF 30 el desarrollo inicial. Hosting desde $15.000 CLP/mes. Sin costos ocultos. Cotización personalizada por WhatsApp en menos de 24 horas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo agregar propiedades yo mismo sin saber programar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, 100%. El panel WordPress es muy intuitivo — igual que subir una foto a Instagram. Agrega fotos, precio, descripción y ubicación en minutos. Te capacitamos en la entrega."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Apareceré en Google cuando busquen corredor de propiedades en mi ciudad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ese es el objetivo principal. Configuramos SEO local completo: metadatos, Schema.org, Google Business Profile y velocidad de carga óptima. Resultados visibles en 30 a 90 días."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Funciona para inmobiliarias grandes también?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. La tecnología escala desde un corredor independiente hasta inmobiliarias con más de 500 propiedades y múltiples agentes. El sistema crece contigo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa si necesito cambios después de la entrega?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Incluimos 30 días de soporte post-entrega sin costo adicional. Después ofrecemos planes de mantenimiento mensual o cobro por hora según lo que necesites."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Trabajan en todo Chile o solo en algunas ciudades?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Todo Chile — desde Arica hasta Punta Arenas. Trabajamos 100% remoto por videollamada y WhatsApp, la ubicación no importa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo seguir usando Portalinmobiliario además de mi página?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Tu sitio web es completamente independiente. Puedes usarlos en paralelo y dejar de depender solo de los portales para conseguir clientes."
+      }
+    }
+  ]
+}
+</script>
+
+</Layout>

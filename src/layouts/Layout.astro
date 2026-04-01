@@ -1,0 +1,242 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = "Página Web para Corredor de Propiedades Chile | DiseñoPaginas.cl",
+  description = "Creamos páginas web profesionales para corredores de propiedades e inmobiliarias en Chile. WordPress Headless + Astro JS. Rápido, moderno y posicionado en Google.",
+} = Astro.props;
+
+const WA_LINK = "https://wa.me/56961765268?text=" + encodeURIComponent("Hola, quiero una página web para mi corredora de propiedades");
+---
+<!doctype html>
+<html lang="es-CL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="página web corredor propiedades, diseño web inmobiliaria chile, sitio web bienes raíces, desarrollo web corredora propiedades, página inmobiliaria profesional, web corredor propiedades chile" />
+    <link rel="canonical" href="https://diseñopaginas.cl/diseno-web-corredor-propiedades" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://diseñopaginas.cl/diseno-web-corredor-propiedades" />
+    <meta property="og:image" content="https://diseñopaginas.cl/diseno-web-corredor-propiedades/hero-bg.webp" />
+    <meta property="og:locale" content="es_CL" />
+    <meta name="geo.region" content="CL" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://diseñopaginas.cl/diseno-web-corredor-propiedades/hero-bg.webp" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "DiseñoPaginas.cl",
+      "description": "Páginas web para corredores de propiedades e inmobiliarias en Chile",
+      "url": "https://diseñopaginas.cl",
+      "telephone": "+56961765268",
+      "areaServed": { "@type": "Country", "name": "Chile" }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: 'DM Sans', sans-serif; }
+      .font-display { font-family: 'Playfair Display', serif; }
+      .text-sm { font-size: 0.975rem !important; }
+    </style>
+  </head>
+  <body class="bg-white text-slate-700 antialiased">
+
+    <!-- TOP BAR -->
+    <div class="bg-[#0D1B3E] text-white text-sm py-2.5 px-6">
+      <div class="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-2">
+        <div class="flex items-center gap-6">
+          <a href="mailto:codigoraul@gmail.com" class="flex items-center gap-2 hover:text-[#1BDCF5] transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            codigoraul@gmail.com
+          </a>
+          <span class="flex items-center gap-2 text-blue-200">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Todo Chile
+          </span>
+        </div>
+        <div class="flex items-center gap-6">
+          <span class="flex items-center gap-2 text-blue-200/60">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Lunes a sábado: 10:00 a 23:00
+          </span>
+          <div class="flex items-center gap-3">
+            <a href="#" class="hover:text-[#1BDCF5] transition-colors" aria-label="Facebook">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" class="hover:text-[#1BDCF5] transition-colors" aria-label="Instagram">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" class="hover:text-[#1BDCF5] transition-colors" aria-label="LinkedIn">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAV PRINCIPAL -->
+    <header id="nav" class="bg-white/90 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
+        <a href="/" class="flex-shrink-0">
+          <img src="/diseno-web-logo.svg" alt="DiseñoPaginas.cl - Desarrollo web profesional para corredores de propiedades en Chile" class="h-14 w-auto" />
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="#inicio" class="text-slate-800 hover:text-[#0045A7] font-medium text-sm tracking-wide transition-colors">Inicio</a>
+          <a href="#servicios" class="text-slate-800 hover:text-[#0045A7] font-medium text-sm tracking-wide transition-colors">Servicios</a>
+          <a href="#proceso" class="text-slate-800 hover:text-[#0045A7] font-medium text-sm tracking-wide transition-colors">Proceso</a>
+          <a href="#tecnologia" class="text-slate-800 hover:text-[#0045A7] font-medium text-sm tracking-wide transition-colors">Tecnología</a>
+          <a href="#faq" class="text-slate-800 hover:text-[#0045A7] font-medium text-sm tracking-wide transition-colors">FAQ</a>
+          <a href="#contacto" class="text-slate-800 hover:text-[#0045A7] font-medium text-sm tracking-wide transition-colors">Contacto</a>
+        </nav>
+
+        <a href={WA_LINK} target="_blank" rel="noopener"
+           class="hidden lg:inline-flex items-center gap-2 bg-[#0045A7] text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-[#003580] transition-colors">
+          Contactar ahora
+        </a>
+
+        <button id="hamburger" class="lg:hidden p-2 text-slate-600" aria-label="Menú">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden border-t border-slate-100 bg-white px-6 py-4 flex-col gap-3">
+        <a href="#inicio" class="py-2 text-slate-600 font-medium border-b border-slate-50">Inicio</a>
+        <a href="#servicios" class="py-2 text-slate-600 font-medium border-b border-slate-50">Servicios</a>
+        <a href="#proceso" class="py-2 text-slate-600 font-medium border-b border-slate-50">Proceso</a>
+        <a href="#tecnologia" class="py-2 text-slate-600 font-medium border-b border-slate-50">Tecnología</a>
+        <a href="#faq" class="py-2 text-slate-600 font-medium border-b border-slate-50">FAQ</a>
+        <a href="#contacto" class="py-2 text-slate-600 font-medium border-b border-slate-50">Contacto</a>
+        <a href={WA_LINK} target="_blank" rel="noopener"
+           class="mt-2 bg-[#0045A7] text-white text-center font-semibold py-3 px-6 rounded-lg">
+          Contactar ahora
+        </a>
+      </div>
+    </header>
+
+    <!-- CONTENIDO -->
+    <slot />
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0D1B3E] text-white pt-16 pb-0">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10">
+
+          <!-- Columna 1: Logo + descripción -->
+          <div class="lg:col-span-1">
+            <img src="/logo-claro.png" alt="DiseñoPaginas.cl - Agencia de diseño web especializada en sitios inmobiliarios" class="h-14 w-auto mb-5" />
+            <p class="text-white/60 text-base leading-relaxed mb-6">
+              Diseño y desarrollo de páginas web 2025, que transforman la presencia digital de empresas y emprendedores. Desde 2012 diseñando páginas web.
+            </p>
+            <div class="flex items-center gap-3">
+              <a href="#" class="w-9 h-9 rounded-lg border border-white/15 flex items-center justify-center hover:border-[#1BDCF5] hover:text-[#1BDCF5] transition-all text-white/40" aria-label="Facebook">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="#" class="w-9 h-9 rounded-lg border border-white/15 flex items-center justify-center hover:border-[#1BDCF5] hover:text-[#1BDCF5] transition-all text-white/40" aria-label="Instagram">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+              <a href="#" class="w-9 h-9 rounded-lg border border-white/15 flex items-center justify-center hover:border-[#1BDCF5] hover:text-[#1BDCF5] transition-all text-white/40" aria-label="LinkedIn">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Columna 2: Links relacionados 1 -->
+          <div>
+            <h4 class="text-white font-semibold text-base mb-5 pb-2 border-b border-[#0045A7]/50">Links relacionados</h4>
+            <ul class="space-y-3">
+              <li><a href="https://diseñopaginas.cl/paginas-web-clinica-dental.php" class="text-white/50 hover:text-white text-sm transition-colors">Web Dentistas</a></li>
+              <li><a href="https://diseñopaginas.cl/diseno-de-logotipo.php" class="text-white/50 hover:text-white text-sm transition-colors">Logos e identidad visual</a></li>
+              <li><a href="https://diseñopaginas.cl/web-tienda-online.php" class="text-white/50 hover:text-white text-sm transition-colors">Tiendas Online</a></li>
+              <li><a href="https://diseñopaginas.cl/paginas-web-empresas-mineria.php" class="text-white/50 hover:text-white text-sm transition-colors">Empresas Minería</a></li>
+              <li><a href="https://diseñopaginas.cl/diseno-web-abogados.php" class="text-white/50 hover:text-white text-sm transition-colors">Webs Abogados</a></li>
+              <li><a href="https://diseñopaginas.cl/diseno-web-corredor-propiedades" class="text-[#1BDCF5] hover:text-white text-sm transition-colors font-medium">Corredoras propiedades</a></li>
+            </ul>
+          </div>
+
+          <!-- Columna 3: Links relacionados 2 -->
+          <div>
+            <h4 class="text-white font-semibold text-base mb-5 pb-2 border-b border-[#0045A7]/50">Ciudades</h4>
+            <ul class="space-y-3">
+              <li><a href="https://diseñopaginas.cl/antofagasta" class="text-white/50 hover:text-white text-sm transition-colors">Páginas web Antofagasta</a></li>
+              <li><a href="https://diseñopaginas.cl/laserena" class="text-white/50 hover:text-white text-sm transition-colors">Páginas web La Serena</a></li>
+              <li><a href="https://diseñopaginas.cl/vina-del-mar" class="text-white/50 hover:text-white text-sm transition-colors">Páginas web Viña del Mar</a></li>
+              <li><a href="https://diseñopaginas.cl/santiago" class="text-white/50 hover:text-white text-sm transition-colors">Páginas web Santiago</a></li>
+              <li><a href="https://diseñopaginas.cl/concepcion" class="text-white/50 hover:text-white text-sm transition-colors">Páginas web Concepción</a></li>
+              <li><a href="https://diseñopaginas.cl/diseno-web-temuco.php" class="text-white/50 hover:text-white text-sm transition-colors">Páginas web Temuco</a></li>
+              <li><a href="https://diseñopaginas.cl/diseno-web-valdivia.php" class="text-white/50 hover:text-white text-sm transition-colors">Páginas web Valdivia</a></li>
+              <li><a href="https://diseñopaginas.cl/diseno-web-osorno.php" class="text-white/50 hover:text-white text-sm transition-colors">Páginas web Osorno</a></li>
+              <li><a href="https://diseñopaginas.cl/diseno-web-puerto-montt.php" class="text-white/50 hover:text-white text-sm transition-colors">Páginas web Puerto Montt</a></li>
+              <li><a href="https://diseñopaginas.cl/diseno-web-arica.php" class="text-white/50 hover:text-white text-sm transition-colors">Páginas web Arica</a></li>
+            </ul>
+          </div>
+
+          <!-- Columna 4: Datos de contacto -->
+          <div>
+            <h4 class="text-white font-semibold text-base mb-5 pb-2 border-b border-[#0045A7]/50">Datos de contacto</h4>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3 text-white/60 text-sm">
+                <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-[#1BDCF5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                Temuco, Chile
+              </li>
+              <li class="flex items-start gap-3 text-white/60 text-sm">
+                <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-[#1BDCF5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <a href="mailto:codigoraul@gmail.com" class="hover:text-white transition-colors">codigoraul@gmail.com</a>
+              </li>
+              <li class="flex items-start gap-3 text-white/60 text-sm">
+                <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-[#1BDCF5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                <a href="tel:+56961765268" class="hover:text-white transition-colors">(+56) 9 61765268</a>
+              </li>
+              <li class="flex items-start gap-3 text-white/60 text-sm">
+                <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-[#1BDCF5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Lunes a sábado: de 10:00 a 23:00 hrs
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Footer bottom -->
+        <div class="py-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-white/30 text-xs">
+          <span>&copy; 2025 DiseñoPaginas.cl — Página web para corredor de propiedades Chile</span>
+          <span>Desarrollado con Astro JS + WordPress Headless</span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
+      hamburger?.addEventListener('click', () => {
+        mobileMenu?.classList.toggle('hidden');
+        mobileMenu?.classList.toggle('flex');
+      });
+      mobileMenu?.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          mobileMenu.classList.remove('flex');
+        });
+      });
+    </script>
+
+  </body>
+</html>
